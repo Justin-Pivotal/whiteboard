@@ -11,7 +11,7 @@ describe StandupsController do
     context "with valid params" do
       it "creates a standup" do
         expect do
-          post :create, standup: {title: "Berlin", to_address: "berlin+standup@pivotallabs.com"}
+          post :create, params: { standup: {title: "Berlin", to_address: "berlin+standup@pivotallabs.com"} }
         end.to change { Standup.count }.by(1)
         expect(response).to be_redirect
       end
@@ -20,7 +20,7 @@ describe StandupsController do
     context "with invalid params" do
       it "creates a standup" do
         expect do
-          post :create, standup: {}
+          post :create, params: { standup: {} }
         end.to change { Standup.count }.by(0)
         expect(response).to render_template 'standups/new'
       end

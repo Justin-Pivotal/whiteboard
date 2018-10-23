@@ -2,21 +2,20 @@ source 'https://rubygems.org'
 
 ruby '2.3.5'
 
-gem 'rails', '~> 4.2'
+gem 'rails', '~> 5.2'
 
-gem 'mysql2', '~> 0.3.18'
+gem 'mysql2', '~> 0.5.2'
 gem 'unicorn'
 gem 'jquery-rails'
 gem 'omniauth-saml'
 gem 'github-markdown', require: 'github/markdown'
-gem 'protected_attributes'
 gem 'sass-rails'
 gem 'compass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'font-awesome-sass-rails'
-gem 'evaporator', '~> 0.1.0', git: 'https://github.com/pivotal/evaporator.git'
+gem 'evaporator', '~> 0.2.0', git: 'https://github.com/Justin-Pivotal/evaporator'
 gem 'newrelic_rpm'
 gem 'sentry-raven'
 gem 'responders', '~> 2.0'
@@ -35,7 +34,7 @@ group :test, :development do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'capybara'
-  gem 'capybara-webkit', '1.14.0'
+  gem 'capybara-webkit'
   gem 'launchy'
   gem 'database_cleaner'
   gem 'letter_opener'
@@ -45,6 +44,7 @@ group :test, :development do
   gem 'dotenv-rails'
   gem 'pry-rails'
   gem 'byebug'
+  gem 'rails-controller-testing'
 end
 
 group :test do

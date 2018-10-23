@@ -1,6 +1,6 @@
 class StandupsController < ApplicationController
-  before_filter :load_standup, only: [:edit, :show, :update, :destroy]
-  around_filter :standup_timezone, only: [:edit, :show, :update, :destroy]
+  before_action :load_standup, only: [:edit, :show, :update, :destroy]
+  around_action :standup_timezone, only: [:edit, :show, :update, :destroy]
 
 
   def create

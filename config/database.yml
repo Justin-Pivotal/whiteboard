@@ -3,12 +3,17 @@ development:
   host: localhost
   database: whiteboard_development
   template: template0
+  username: whiteboard
+  password: password
 
 test:
   adapter: mysql2
   host: localhost
   database: whiteboard_test
   template: template0
+  username: whiteboard
+  password: password
+
 
 production:
   adapter: mysql2
